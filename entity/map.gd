@@ -1,0 +1,10 @@
+extends Object
+var size_x=0
+var size_y=0
+var id_count=0
+var id_list=[]
+var name=""
+var number=0
+var event_count=0
+var events=[]
+var tiles=[]

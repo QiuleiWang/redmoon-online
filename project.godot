@@ -1,0 +1,61 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "AnimatedSprite",
+"class": "AniSprite",
+"language": "GDScript",
+"path": "res://AniSprite.gd"
+}, {
+"base": "Node2D",
+"class": "AnimationFrame",
+"language": "GDScript",
+"path": "res://AnimationFrame.gd"
+}, {
+"base": "ImageTexture",
+"class": "SpriteFrame",
+"language": "GDScript",
+"path": "res://SpriteFrame.gd"
+} ]
+_global_script_class_icons={
+"AniSprite": "",
+"AnimationFrame": "",
+"SpriteFrame": ""
+}
+
+[application]
+
+config/name="redmoon"
+run/main_scene="res://map.tscn"
+
+[autoload]
+
+Parsing="*res://parser/parsing.gd"
+Cp949="*res://cp949/cp949.gd"
+SpriteMgr="*res://mgr/sprite_mgr.gd"
+MapMgr="*res://mgr/map_mgr.gd"
+DataMgr="*res://mgr/data_mgr.gd"
+ListMgr="*res://mgr/list_mgr.gd"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

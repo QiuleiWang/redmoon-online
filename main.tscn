@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://animation.gd" type="Script" id=2]
+
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="Tree" type="Tree" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -788.0
+
+[node name="animation" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 59.0
+margin_top = -50.0
+margin_right = 159.0
+margin_bottom = 50.0
+script = ExtResource( 2 )
+
+[node name="info" type="Label" parent="animation"]
+margin_left = -298.0
+margin_top = -193.0
+margin_right = 70.0
+margin_bottom = -144.0
+text = "fdgdfgfdg"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 893.0
+margin_top = 538.0
+margin_right = 1011.0
+margin_bottom = 585.0
+text = "export"
+
+[node name="dirtionBt" type="Button" parent="."]
+margin_left = 444.0
+margin_top = 539.0
+margin_right = 578.0
+margin_bottom = 575.0
+text = "next"
+
+[connection signal="item_selected" from="Tree" to="." method="_on_Tree_item_selected"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="dirtionBt" to="." method="_on_dirtionBt_pressed"]
